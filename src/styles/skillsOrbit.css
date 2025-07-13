@@ -1,0 +1,331 @@
+/* Core Container */
+.orbit-system {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    background-color: rgb(20, 29, 41);
+    z-index: 10;
+}
+.orbit-system:hover .orbit-icon {
+    animation-play-state: paused;
+    filter: blur(1px);
+    opacity: 0.6;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.orbit-icon {
+    animation-play-state: running;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+/* central icon */
+.center-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateZ(0);
+    font-size: 50px;
+    opacity: 0.8;
+    color: #ffffff;
+    text-shadow: 0 0 20px #ffffff;
+}
+
+/* Orbit Group */
+.orbit-group {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 350px;
+}
+
+/* Orbiting Item Style */
+.orbit-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 0;
+    font-size: 40px;
+    color: white;
+    transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+}
+
+/* ORBIT X */
+.orbit-x .orbit-icon {
+    color: #00ffff;
+        text-shadow: 0 0 10px #00ffff;
+    animation: orbitX 16s linear infinite;
+}
+
+.orbit-x .orbit-icon:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.orbit-x .orbit-icon:nth-child(2) {
+    animation-delay: -4s;
+}
+
+.orbit-x .orbit-icon:nth-child(3) {
+    animation-delay: -8s;
+}
+
+.orbit-x .orbit-icon:nth-child(4) {
+    animation-delay: -12s;
+}
+
+@keyframes orbitX {
+    0% {
+        transform: rotate3d(0, 1, 0, 0deg) translateZ(175px) scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    50% {
+        transform: rotate3d(0, 1, 0, 180deg) translateZ(175px) scale(0.6);
+        opacity: 0.3;
+        filter: blur(2px);
+    }
+
+    100% {
+        transform: rotate3d(0, 1, 0, 360deg) translateZ(175px) scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+/* ORBIT Y */
+.orbit-y .orbit-icon {
+    color: #672967;
+        text-shadow: 0 0 10px #672967;
+    animation: orbitY 16s linear infinite;
+}
+
+.orbit-y .orbit-icon:nth-child(1) {
+    animation-delay: -2s;
+}
+
+.orbit-y .orbit-icon:nth-child(2) {
+    animation-delay: -6s;
+}
+
+.orbit-y .orbit-icon:nth-child(3) {
+    animation-delay: -10s;
+}
+
+.orbit-y .orbit-icon:nth-child(4) {
+    animation-delay: -14s;
+}
+
+@keyframes orbitY {
+    0% {
+        transform: rotate3d(1, 0, 0, 0deg) translateZ(175px) scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    50% {
+        transform: rotate3d(1, 0, 0, 180deg) translateZ(175px) scale(0.6);
+        opacity: 0.3;
+        filter: blur(2px);
+    }
+
+    100% {
+        transform: rotate3d(1, 0, 0, 360deg) translateZ(175px) scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+/* ORBIT 45 */
+.orbit-45 .orbit-icon {
+    color: #00ff88;
+        text-shadow: 0 0 10px #00ff88;
+    animation: orbit45 16s linear infinite;
+}
+
+.orbit-45 .orbit-icon:nth-child(1) {
+    animation-delay: -1s;
+}
+
+.orbit-45 .orbit-icon:nth-child(2) {
+    animation-delay: -5s;
+}
+
+.orbit-45 .orbit-icon:nth-child(3) {
+    animation-delay: -9s;
+}
+
+.orbit-45 .orbit-icon:nth-child(4) {
+    animation-delay: -13s;
+}
+
+@keyframes orbit45 {
+    0% {
+        transform: rotate3d(1, 1, 0, 0deg) translateZ(175px) scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    50% {
+        transform: rotate3d(1, 1, 0, 180deg) translateZ(175px) scale(0.6);
+        opacity: 0.3;
+        filter: blur(2px);
+    }
+
+    100% {
+        transform: rotate3d(1, 1, 0, 360deg) translateZ(175px) scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+/* ORBIT 135 */
+.orbit-135 .orbit-icon {
+    color: #a1a121;
+    text-shadow: 0 0 10px #ffff00;
+    animation: orbit135 16s linear infinite;
+}
+
+.orbit-135 .orbit-icon:nth-child(1) {
+    animation-delay: -3s;
+}
+
+.orbit-135 .orbit-icon:nth-child(2) {
+    animation-delay: -7s;
+}
+
+.orbit-135 .orbit-icon:nth-child(3) {
+    animation-delay: -11s;
+}
+
+.orbit-135 .orbit-icon:nth-child(4) {
+    animation-delay: -15s;
+}
+
+@keyframes orbit135 {
+    0% {
+        transform: rotate3d(1, -1, 0, 0deg) translateZ(175px) scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    50% {
+        transform: rotate3d(1, -1, 0, 180deg) translateZ(175px) scale(0.6);
+        opacity: 0.3;
+        filter: blur(2px);
+    }
+
+    100% {
+        transform: rotate3d(1, -1, 0, 360deg) translateZ(175px) scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+
+.orbit-x.reverse .orbit-icon {
+    animation: orbitXReverse 16s linear infinite;
+  }
+  @keyframes orbitXReverse {
+    from { transform: rotate3d(0, 1, 0, 360deg) translateZ(175px) scale(1); }
+    to { transform: rotate3d(0, 1, 0, 0deg) translateZ(175px) scale(1); }
+  }
+  
+  /* Repeat for orbitY, orbit45, orbit135 */
+  .orbit-y.reverse .orbit-icon {
+    animation: orbitYReverse 16s linear infinite;
+  }
+  @keyframes orbitYReverse {
+    from { transform: rotate3d(1, 0, 0, 360deg) translateZ(175px) scale(1); }
+    to { transform: rotate3d(1, 0, 0, 0deg) translateZ(175px) scale(1); }
+  }
+  
+  .orbit-45.reverse .orbit-icon {
+    animation: orbit45Reverse 16s linear infinite;
+  }
+  @keyframes orbit45Reverse {
+    from { transform: rotate3d(1, 1, 0, 360deg) translateZ(175px) scale(1); }
+    to { transform: rotate3d(1, 1, 0, 0deg) translateZ(175px) scale(1); }
+  }
+  
+  .orbit-135.reverse .orbit-icon {
+    animation: orbit135Reverse 16s linear infinite;
+  }
+  @keyframes orbit135Reverse {
+    from { transform: rotate3d(1, -1, 0, 360deg) translateZ(175px) scale(1); }
+    to { transform: rotate3d(1, -1, 0, 0deg) translateZ(175px) scale(1); }
+  }
+  
+
+  @media (max-width: 480px) , (max-width:1200px)and (min-width:767px) {
+
+      .orbit-system,
+      .orbit-group {
+          width: 280px;
+          height: 280px;
+      }
+
+      .orbit-icon {
+          font-size: 32px;
+          /* optional: scale down icons slightly */
+      }
+
+      @keyframes orbitX {
+          0% {
+              transform: rotate3d(0, 1, 0, 0deg) translateZ(140px) scale(1);
+          }
+
+          50% {
+              transform: rotate3d(0, 1, 0, 180deg) translateZ(140px) scale(0.6);
+          }
+
+          100% {
+              transform: rotate3d(0, 1, 0, 360deg) translateZ(140px) scale(1);
+          }
+      }
+
+      @keyframes orbitY {
+          0% {
+              transform: rotate3d(1, 0, 0, 0deg) translateZ(140px) scale(1);
+          }
+
+          50% {
+              transform: rotate3d(1, 0, 0, 180deg) translateZ(140px) scale(0.6);
+          }
+
+          100% {
+              transform: rotate3d(1, 0, 0, 360deg) translateZ(140px) scale(1);
+          }
+      }
+
+      @keyframes orbit45 {
+          0% {
+              transform: rotate3d(1, 1, 0, 0deg) translateZ(140px) scale(1);
+          }
+
+          50% {
+              transform: rotate3d(1, 1, 0, 180deg) translateZ(140px) scale(0.6);
+          }
+
+          100% {
+              transform: rotate3d(1, 1, 0, 360deg) translateZ(140px) scale(1);
+          }
+      }
+
+      @keyframes orbit135 {
+          0% {
+              transform: rotate3d(1, -1, 0, 0deg) translateZ(140px) scale(1);
+          }
+
+          50% {
+              transform: rotate3d(1, -1, 0, 180deg) translateZ(140px) scale(0.6);
+          }
+
+          100% {
+              transform: rotate3d(1, -1, 0, 360deg) translateZ(140px) scale(1);
+          }
+      }
+  }

@@ -1,0 +1,41 @@
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vp;
+    height:100vp;
+    overflow-x: hidden;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.5;
+    background-color: #1a2a2c;
+    color: white;
+    overflow-x: auto;
+    
+}
+#root{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vp;
+    width: 100vp;
+    padding:0;
+    margin:0;
+    
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}

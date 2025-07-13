@@ -1,0 +1,29 @@
+.container{
+    max-width:1000px; 
+    margin:60px auto 20px auto;
+    text-align: center;
+
+         
+}
+.btn{
+    padding: 10px 20px;
+    margin:20px auto;
+    background-color: #4183cb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor:pointer;
+    font-size: 16px;
+    transition:background-color ease 0.3s;
+}
+.btn:hover{
+    font-size: 17px;
+    background-color:#007BFF ;
+
+}
+.frm{
+    border:1px solid #ccc ;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
