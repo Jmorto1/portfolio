@@ -17,10 +17,9 @@
     padding-bottom: 40px;
 }
 .heroImageContainer{
-    max-width: 350px;
-    max-height: 350px;
-    margin-right:20px;
-    margin-bottom: 20px;
+    max-width: 330px;
+    max-height: 330px;
+    margin-right:20px auto;
     padding-top: 30px;
 }
 .heroImg {
