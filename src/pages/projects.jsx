@@ -1,14 +1,14 @@
 import "../styles/projects.css"
 import { useState,useEffect,useRef} from "react";
-import { FaReact, FaNodeJs, FaCss3Alt } from "react-icons/fa";
+import { FaReact, FaNodeJs,FaCss3Alt} from "react-icons/fa";
 export default function Project(){
     const projectRef = useRef([]);
     const selectedProjectRef=useRef(null);
     const [selectedProject,setSelectedProject]=useState(null);
     const projects=[{
         id:"1",
-        img:"images/projects/demo.jpg",
-        name:"Project Name",
+        img:"images/projects/daily-task-management.png",
+        name:"Daily Task Management",
         desc:"Short description of the project...",
         liveLink:"#",
         sourceLink:"#",
@@ -22,7 +22,7 @@ export default function Project(){
     },
         {id:"2",
         img:"images/projects/ethio_calendar.png",
-        name:"Project Name",
+        name:"Ethiopian Calendar",
         desc:"Short description of the project...",
         
         liveLink:"https://ethio-calendar.vercel.app/",
@@ -35,60 +35,8 @@ export default function Project(){
             { name: "CSS", icon: FaCss3Alt }
         ]
     },{id:"3",
-        img:"images/projects/demo.jpg",
-        name:"Project Name",
-        desc:"Short description of the project...",
-        liveLink:"#",
-        sourceLink:"#",
-        tech:["React","Node.js"],
-        longDesc:"long description",
-        techTags: [
-            { name: "React", icon: FaReact },
-            { name: "Node.js", icon: FaNodeJs },
-            { name: "CSS", icon: FaCss3Alt }
-        ]
-    },{id:"4",
-        img:"images/projects/demo.jpg",
-        name:"Project Name",
-        desc:"Short description of the project...",
-        liveLink:"#",
-        sourceLink:"#",
-        tech:["React","Node.js"],
-        longDesc:"long description",
-        techTags: [
-            { name: "React", icon: FaReact },
-            { name: "Node.js", icon: FaNodeJs },
-            { name: "CSS", icon: FaCss3Alt }
-        ]
-    },{id:"5",
-        img:"images/projects/demo.jpg",
-        name:"Project Name",
-        desc:"Short description of the project...",
-        liveLink:"#",
-        sourceLink:"#",
-        tech:["React","Node.js"],
-        longDesc:"long description",
-        techTags: [
-            { name: "React", icon: FaReact },
-            { name: "Node.js", icon: FaNodeJs },
-            { name: "CSS", icon: FaCss3Alt }
-        ]
-    },{id:"6",
-        img:"images/projects/demo.jpg",
-        name:"Project Name",
-        desc:"Short description of the project...",
-        liveLink:"#",
-        sourceLink:"#",
-        tech:["React","Node.js"],
-        longDesc:"long description",
-        techTags: [
-            { name: "React", icon: FaReact },
-            { name: "Node.js", icon: FaNodeJs },
-            { name: "CSS", icon: FaCss3Alt }
-        ]
-    },{id:"7",
-        img:"images/projects/demo.jpg",
-        name:"Project Name",
+        img:"images/projects/pprs.png",
+        name:"Preemitive Priority Scheduling Simulator",
         desc:"Short description of the project...",
         liveLink:"#",
         sourceLink:"#",
