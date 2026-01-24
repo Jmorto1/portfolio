@@ -1,6 +1,9 @@
 import "../styles/projects.css"
 import { useState,useEffect,useRef} from "react";
-import { FaReact, FaNodeJs,FaCss3Alt} from "react-icons/fa";
+import { FaReact} from "react-icons/fa";
+import { SiTypescript, SiDjango } from "react-icons/si";
+import { DiJava } from "react-icons/di";
+
 export default function Project(){
     const projectRef = useRef([]);
     const selectedProjectRef=useRef(null);
@@ -9,43 +12,39 @@ export default function Project(){
         id:"1",
         img:"images/projects/daily-task-management.png",
         name:"Daily Task Management",
-        desc:"Short description of the project...",
-        liveLink:"#",
-        sourceLink:"#",
+        desc:"Daily task management  ERP system for subcities",
+        liveLink:"https://daily-task-management-two.vercel.app/",
+        sourceLink:"https://github.com/Jmorto1/daily-task-management",
         tech:["React","Node.js"],
-        longDesc:"long description",
+        longDesc:"This project is a comprehensive daily task management system designed for subcities, supporting multiple departments and teams. It enables hierarchical organization of services from departments to teams, and from teams to individual employees ensuring tasks are clearly assigned and tracked. Employees can submit or download detailed reports on their activities, allowing managers to monitor progress, evaluate performance, and maintain efficient workflow across all organizational levels.",
         techTags: [
             { name: "React", icon: FaReact },
-            { name: "Node.js", icon: FaNodeJs },
-            { name: "CSS", icon: FaCss3Alt }
+            { name: "Django", icon: SiDjango },
+            { name: "TypeScript", icon: SiTypescript}
         ]
     },
         {id:"2",
         img:"images/projects/ethio_calendar.png",
         name:"Ethiopian Calendar",
-        desc:"Short description of the project...",
+        desc:"Ethiopian Calendar input field for React applications",
         
         liveLink:"https://ethio-calendar.vercel.app/",
         sourceLink:"https://github.com/Jmorto1/ethio-calendar",
         tech:["React","Node.js"],
-        longDesc:"long description",
+        longDesc:"A lightweight and customizable Ethiopian Calendar input field for React (TypeScript + Vite).It works just like the native HTML <input type='date'/>, but supports the Ethiopian calendar system.Perfect for modern web apps that need localized date entry.",
         techTags: [
             { name: "React", icon: FaReact },
-            { name: "Node.js", icon: FaNodeJs },
-            { name: "CSS", icon: FaCss3Alt }
+            { name: "TypeScript", icon: SiTypescript}
         ]
     },{id:"3",
         img:"images/projects/pprs.png",
         name:"Preemitive Priority Scheduling Simulator",
-        desc:"Short description of the project...",
-        liveLink:"#",
-        sourceLink:"#",
+        desc:"Simulator for Preemptive Priority Scheduling Algorithm in Operating Systems",
+        sourceLink:"https://github.com/Jmorto1/preemptive-priority-scheduling-GUI",
         tech:["React","Node.js"],
-        longDesc:"long description",
+        longDesc:"This project is a simulator for the Preemptive Priority Scheduling Algorithm used in operating systems. It allows users to visualize how processes are scheduled based on their priority levels. The simulator provides an interactive interface for users to input process details, such as arrival time, burst time, and priority, and then observe the scheduling behavior through graphical representations and performance metrics.",
         techTags: [
-            { name: "React", icon: FaReact },
-            { name: "Node.js", icon: FaNodeJs },
-            { name: "CSS", icon: FaCss3Alt }
+            { name: "Java", icon: DiJava }
         ]
     }]
     useEffect(()=>{
@@ -112,7 +111,7 @@ export default function Project(){
                             </div>
                             
                                 <div className="actions">
-                                    <a href={selectedProject.liveLink} target="_blank" rel="noopener noreferrer">Live site</a>
+                                    {selectedProject.liveLink &&<a href={selectedProject.liveLink} target="_blank" rel="noopener noreferrer">Live site</a>}
                                     <a href={selectedProject.sourceLink} target="_blank" rel="noopener noreferrer">Source Code</a>
                                 </div>
                             </div>

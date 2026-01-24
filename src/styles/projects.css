@@ -131,6 +131,7 @@ width: 85px;
     line-height: 1.6;
     border-top:rgb(175, 158, 158) solid 1px;
     border-bottom: rgb(175, 158, 158) solid 1px;
+    max-width: 800px;
 }
 .learn{
  width: fit-content;
